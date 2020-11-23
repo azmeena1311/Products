@@ -1,0 +1,33 @@
+<p>add-product works!</p>
+
+<div class="container">
+    <h2>Add New User</h2>
+
+    <form #adduserform="ngForm" (ngSubmit)="addproductformsubmit()">
+
+
+        <div class="form-group">
+            <label for="id">Id :</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name :</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price :</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.price" name="price">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description :</label>
+            <input type="text" class="form-control" required [(ngModel)]="product.desc" name="description">
+        </div>
+
+        <button type="submit" class="btn btn-success"> Submit</button>
+        <button type="reset" class="btn btn-danger">Clear</button>
+        <button type="button" class="btn btn-primary" (click)="gotolist()">Back</button>
+    </form>
+</div>
